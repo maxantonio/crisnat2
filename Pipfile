@@ -14,5 +14,4 @@ requests = "*"
 psycopg2-binary = "*"
 pycryptodome = "*"
 
-[requires]
-python_version = "3.8.2"
+
