@@ -1,0 +1,18 @@
+{% load static %}
+{% load i18n %}
+<section class="page-header">
+            <div class="page-header-bg" style="background-image: url('{% static 'assets/images/backgrounds/'%}{{ bg_image }}')">
+            </div>
+            <div class="page-header-shape-1 float-bob-x-6"></div>
+            <div class="page-header-shape-2 float-bob-x-7"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'index' %}">{% trans "Inicio" %}</a></li>
+                        <li><span>/</span></li>
+                        <li>{{ title }}</li>
+                    </ul>
+                    <h2>{{ title }}</h2>
+                </div>
+            </div>
+        </section>

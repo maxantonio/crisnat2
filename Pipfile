@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "==2.1.5"
+django-heroku = "*"
+gunicorn = "==19.7.1"
+python-dotenv = "*"
+requests = "*"
+psycopg2-binary = "*"
+pycryptodome = "*"
+
+[requires]
+python_version = "3.8.2"

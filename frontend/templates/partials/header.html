@@ -1,0 +1,52 @@
+{% load change_languaje %}
+{% load static %}
+{% load i18n %}
+<header class="main-header clearfix">
+    <nav class="main-menu clearfix">
+        <div class="main-menu-wrapper clearfix">
+            <div class="main-menu-wrapper__left">
+                <div class="main-menu-wrapper__logo">
+                    <a href="{% url 'index' %}"><img src="{% static 'assets/images/resources/logo-crisnat.svg' %}"
+                                                     alt="" class="logo-header"></a>
+                </div>
+                <div class="main-menu-wrapper__main-menu">
+                    <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                    <ul class="main-menu__list">
+                        <li>
+                            <a href="{% url 'index' %}">{% trans "Inicio" %}</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'nosotros' %}">{% trans "Nosotros" %}</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'materiales' %}">{% trans "Materiales" %}</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'sustentabilidad' %}">{% trans "Sustentabilidad" %}</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'media' %}">{% trans "Media" %}</a>
+                        </li>
+                        <li><a href="{% url 'contacto' %}">{% trans "Contacto" %}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-menu-wrapper__right">
+                <div class="flag">
+                    {% if request.LANGUAGE_CODE == 'en' %}
+                        <a class="text-white" href="{% change_lang 'es' %}">
+                            <img width="30" src="{% static 'assets/images/mx.svg' %}" alt="">
+                        </a>
+                    {% else %}
+                        <a class="text-white" href="{% change_lang 'en' %}">
+                            <img width="30" src="{% static 'assets/images/us.svg' %}" alt="">
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="main-menu-wrapper__search-cat">
+                    <a href="#" class="main-menu-wrapper__search search-toggler icon-magnifying-glass"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

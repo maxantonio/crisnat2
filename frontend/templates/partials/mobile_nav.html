@@ -1,0 +1,45 @@
+{% load static %}
+{% load change_languaje %}
+<div class="mobile-nav__wrapper">
+    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+    <!-- /.mobile-nav__overlay -->
+    <div class="mobile-nav__content">
+        <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+        <div class="mobile-nav__container"></div>
+        <!-- /.mobile-nav__container -->
+
+        <ul class="mobile-nav__contact list-unstyled">
+            <li>
+                  {% if request.LANGUAGE_CODE == 'en' %}
+                        <a class="text-white" href="{% change_lang 'es' %}">
+                            <img width="30" src="{% static 'assets/images/mx.svg' %}" alt="">
+                        </a>
+                    {% else %}
+                        <a class="text-white" href="{% change_lang 'en' %}">
+                            <img width="30" src="{% static 'assets/images/us.svg' %}" alt="">
+                        </a>
+                    {% endif %}
+            </li>
+            <li>
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:contacto@crisnat.com.mx">contacto@crisnat.com.mx</a>
+            </li>
+            <li>
+                <i class="fa fa-phone-alt"></i>
+                <a href="tel:12463330079">+1- ( 246 ) 333 - 0079</a>
+            </li>
+        </ul><!-- /.mobile-nav__contact -->
+        <div class="mobile-nav__top">
+            <div class="mobile-nav__social">
+                <a href="https://twitter.com/crisnatmineria" target="_blank"><i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/crisnatmineria" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div><!-- /.mobile-nav__social -->
+        </div><!-- /.mobile-nav__top -->
+
+
+    </div>
+    <!-- /.mobile-nav__content -->
+</div>

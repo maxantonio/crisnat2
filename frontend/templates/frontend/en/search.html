@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block contenido %}
+    <!--Page Header Start-->
+    {% include 'partials/page_header.html' %}
+    <!--Page Header End-->
+    <section class="work-together-two">
+        <div class="container">
+           <div class="row">
+                <script>
+                  (function() {
+                    var cx = '001810222165709585812:ryj3ejzoif4';
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                  })();
+                </script>
+                <gcse:searchresults-only></gcse:searchresults-only>
+            </div>
+        </div>
+    </section>
+{% endblock %}

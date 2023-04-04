@@ -1,0 +1,102 @@
+{% load static %}
+{% load i18n %}
+<footer class="site-footer">
+    <div class="site-footer__top">
+        <div class="site-footer-shape-1"
+             style="background-image: url('{% static 'assets/images/shapes/site-footer-shape-1.png' %}');"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="footer-widget__column footer-widget__about">
+                        <div class="footer-widget__logo">
+                            <a href="{% url 'index' %}"><img class="logo-footer"
+                                                             src="{% static 'assets/images/resources/logo-crisnat.svg' %}"
+                                                             alt=""></a>
+                        </div>
+                        <div class="footer-widget__about-text-box">
+                            <p class="footer-widget__about-text">{% trans "footer_desc" %}</p>
+                        </div>
+                        <div class="site-footer__social">
+                            <a href="https://twitter.com/crisnatmineria" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/crisnatmineria" target="_blank"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="footer-widget__column footer-widget__explore clearfix">
+                        <h3 class="footer-widget__title">{% trans "Explora" %}</h3>
+                        <ul class="footer-widget__explore-list list-unstyled clearfix">
+                            <li>
+                                <a href="{% url 'index' %}">{% trans "Inicio" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'nosotros' %}">{% trans "Nosotros" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'materiales' %}">{% trans "Materiales" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'sustentabilidad' %}">{% trans "Sustentabilidad" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'media' %}">{% trans "Media" %}</a>
+                            </li>
+                            <li><a href="{% url 'contacto' %}">{% trans "Contacto" %}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="footer-widget__column footer-widget__newsletter-box clearfix">
+                        <h3 class="footer-widget__title">{% trans "Noticias" %}</h3>
+                        <p class="footer-widget__newsletter-text">{% trans "text_suscribir" %}
+                        </p>
+                        <form id="newsletter-form-footer" method="post" class="footer-widget__newsletter-form">
+                            {% csrf_token %}
+                            <div class="footer-widget__newsletter-input-box">
+                                <input type="email" placeholder="{% trans "Correo" %}" name="email">
+                                <button type="submit" class="footer-widget__newsletter-btn"><i
+                                        class="far fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                    <div class="footer-widget__column footer-widget__contact clearfix">
+                        <h3 class="footer-widget__title">{% trans "Contacto" %}</h3>
+                        <p class="footer-widget__contact-text">
+                            Blvd. Campestre 2502, El Refugio, 37156 León, Gto., Mexico
+                        </p>
+                        <h4 class="footer-widget__contact-info">
+
+                            <a href="mailto:contacto@crisnat.com.mx"
+                               class="footer-widget__contact-email">contacto@crisnat.com.mx</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer__bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-6">
+                    <div class="text-lg-start text-md-start text-sm-center">
+                        <p class="site-footer__bottom-text   ">© Copyright 2022 by Crisnat
+                        </p>
+
+                    </div>
+
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="text-lg-end text-md-end text-sm-center">
+                        <p class="site-footer__bottom-text "> {% trans "disenno" %} <a
+                                href="https://www.kaplinski.ca/">Kaplinski</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

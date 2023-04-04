@@ -1,0 +1,138 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block contenido %}
+    <!--Page Header Start-->
+    {% include 'partials/page_header.html' %}
+    <!--Page Header End-->
+
+    <!--Work Together Two Start-->
+    <section class="work-together-two sustenta">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="work-together-two__left wow slideInLeft" data-wow-delay="100ms"
+                         data-wow-duration="2500ms">
+                        <div class="work-together-two__img">
+                            <img src="{% static 'assets/images/crisnat/sustentabilidad12.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="work-together-tow__right">
+                        <div class="section-title text-left">
+                            <span class="section-title__tagline">Una visión integral</span>
+                            <h2 class="section-title__title">La sustentabilidad como eje de nuestras operaciones</h2>
+                        </div>
+                        <div class="work-together-tow__content">
+
+                            <h3 class="work-together-tow__text">En Crisnat entendemos que cualquier empresa tiene el
+                                compromiso de cuidar de todos los grupos de interés.</h3>
+                        </div>
+                        <p class="work-together-tow__text-2">Desde el inicio de nuestras operaciones pusimos en el
+                            centro de nuestras operaciones la sustentabilidad
+                            en cada uno de los proyectos en donde participamos.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Work Together Two End-->
+
+
+    <!--Quality Work Start-->
+    <section class="quality-work">
+        <div class="quality-work-shape-1 float-bob-x-2"></div>
+        <div class="quality-work-shape-2 float-bob-x-2"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-lg-7">
+                    <div class="quality-work__left">
+                        <div class="section-title text-left">
+                            <span class="section-title__tagline">Siempre a la vanguardia</span>
+                            <h2 class="section-title__title">Cuidado del <br> medio ambiente</h2>
+                        </div>
+                        <div class="quality-work__tab-box tabs-box">
+                            <ul class="tab-buttons clearfix list-unstyled">
+                                <li data-tab="#solutions" class="tab-btn active-btn"><span>Agua</span></li>
+                                <li data-tab="#work" class="tab-btn"><span>Manejo de residuos</span></li>
+                            </ul>
+                            <div class="tabs-content">
+                                <!--tab-->
+                                <div class="tab active-tab" id="solutions">
+                                    <div class="tab-content__inner">
+                                        <div class="tab-content__img">
+                                            <img src="{% static 'assets/images/crisnat/water.jpg' %}"
+                                                 alt="">
+                                        </div>
+                                        <div class="tab-content__contnet">
+                                            <h4 class="tab-content__title">Comprometidos con los objetivos de desarrollo
+                                                sostenible</h4>
+                                            <p class="tab-content__text">Siguiendo las recomendaciones de los organismos
+                                                internacionales, en Crisnat se han tomado un conjunto de prácticas para
+                                                hacer un uso optimo de este vital líquido.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--tab-->
+                                <div class="tab " id="work">
+                                    <div class="tab-content__inner">
+                                        <div class="tab-content__img">
+                                            <img src="{% static 'assets/images/crisnat/ciclo.jpg' %}"
+                                                 alt="">
+                                        </div>
+                                        <div class="tab-content__contnet">
+                                            <h4 class="tab-content__title">Compromiso con el futuro</h4>
+                                            <p class="tab-content__text">En cada etapa de nuestros procesos se considera
+                                                de manera integral el manejo de desechos que puedan afectar al
+                                                medioambiente y la sociedad.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5">
+                    <div class="quality-work__right">
+                        <ul class="quality-work__points list-unstyled">
+                            <li>
+                                <div class="icon">
+                                    <span class="icon-checking"></span>
+                                </div>
+                                <div class="text">
+                                    <h4>Salud, seguridad y bienestar</h4>
+                                    <p>Nuestro capital humano es nuestro recurso más importante.
+                                        A través de un proceso de revisión constante buscamos procurar
+                                        el bienestar integral de todos nuestros colaboradores.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <span class="icon-conversation"></span>
+                                </div>
+                                <div class="text">
+                                    <h4>Comunidades</h4>
+                                    <p>Entendemos que la importancia de trabajar de forma conjunta para impactar
+                                        positivamente las comunidades cercanas
+                                        a nuestras explotaciones, no solo es nuestro deber sino también nuestra
+                                        convicción.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Quality Work End-->
+
+    <!--Our Mission Two Start-->
+   {% include 'partials/video_es.html' %}
+    <!--Our Mission Two End-->
+
+
+    <!--CTA One Start-->
+    {% include 'partials/our_minerals_es.html' %}
+    <!--CTA One End-->
+{% endblock %}

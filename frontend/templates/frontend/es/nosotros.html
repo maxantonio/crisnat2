@@ -1,0 +1,185 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block contenido %}
+    <!--Page Header Start-->
+    {% include 'partials/page_header.html' %}
+    <!--Page Header End-->
+
+    <!--Work Together Two Start-->
+    <section class="work-together-two nosotros">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="work-together-two__left wow slideInLeft" data-wow-delay="100ms"
+                         data-wow-duration="2500ms">
+                        <div class="work-together-two__img">
+                            <img src="{% static 'assets/images/resources/nosotros1.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="work-together-tow__right">
+                        <div class="section-title text-left">
+                            <span class="section-title__tagline">Minería con una visión integral </span>
+                            <h2 class="section-title__title">Extraemos y comercializamos materiales esenciales</h2>
+                        </div>
+                        <div class="work-together-tow__content">
+                            
+                            <h3 class="work-together-tow__text">Nuestra asociación estratégica con una de las minas de mineral de hierro más grandes del Estado de Michoacán 
+                                nos permite atender la alta demanda del mercado.</h3>
+                        </div>
+                        <p class="work-together-tow__text-2">Ubicada a 110km del puerto Lázaro Cárdenas, la mina JABA 4 es
+                            compuesto por un total de 11.169,86 hectáreas. </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Work Together Two End-->
+
+
+
+    <!--Quality Work Start-->
+    <section class="quality-work nosotros">
+        <div class="quality-work-shape-1 float-bob-x-2"></div>
+        <div class="quality-work-shape-2 float-bob-x-2"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-lg-7">
+                    <div class="quality-work__left">
+                        <div class="section-title text-left">
+                            <span class="section-title__tagline">Flexibilidad operativa</span>
+                            <h2 class="section-title__title">Una visión integral <br> de la producción minera</h2>
+                        </div>
+                        <div class="quality-work__tab-box tabs-box">
+                            <ul class="tab-buttons clearfix list-unstyled">
+                                <li data-tab="#solutions" class="tab-btn active-btn"><span>Materiales</span></li>
+                                <li data-tab="#work" class="tab-btn"><span>Sustentabilidad</span></li>
+                            </ul>
+                            <div class="tabs-content">
+                                <!--tab-->
+                                <div class="tab active-tab" id="solutions">
+                                    <div class="tab-content__inner">
+                                        <div class="tab-content__img">
+                                            <img src="{% static 'assets/images/crisnat/hierro11.jpg' %}"
+                                                 alt="">
+                                        </div>
+                                        <div class="tab-content__contnet">
+                                            <h4 class="tab-content__title">Portafolio diversificado</h4>
+                                            <p class="tab-content__text">Extraemos y comercializamos: Hierro, Antimonio y Rodio, materiales esenciales  y en alta demanda.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--tab-->
+                                <div class="tab " id="work">
+                                    <div class="tab-content__inner">
+                                        <div class="tab-content__img">
+                                            <img src="{% static 'assets/images/crisnat/sustentabilidad11.jpg' %}"
+                                                 alt="">
+                                        </div>
+                                        <div class="tab-content__contnet">
+                                            <h4 class="tab-content__title">Compromiso de 360 grados</h4>
+                                            <p class="tab-content__text">En cada una de las estapas de los procesos
+                                                de extracción y comercialización nuestro compromiso de sustentabilidad  esta presente.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5">
+                    <div class="quality-work__right">
+                        <ul class="quality-work__points list-unstyled">
+                            <li>
+                                <div class="icon">
+                                    <i class="fa fa-globe fa-3x"></i>
+                                </div>
+                                <div class="text">
+                                    <h4>Alcance internacional</h4>
+                                    <p>Una parte importante de nuestra producción se destina a los mercados internacionales.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fa fa-award fa-3x"></i>
+                                </div>
+                                <div class="text">
+                                    <h4>Calidad certificada</h4>
+                                    <p>En cada uno de nuestros minerales contamos con rigurosos certificados de calidad.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Quality Work End-->
+
+    <!--Our Mission Two Start-->
+   {% include 'partials/video_es.html' %}
+    <!--Our Mission Two End-->
+
+    <section class="case-one">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="section-title__tagline">Compromiso con los más altos estandares</span>
+                <h2 class="section-title__title">Nuestros certificados de calidad</h2>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="100ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInUp;">
+                    <!--Case One Single-->
+                    <div class="case-one__single">
+                        <div class="case-one__img">
+                            <img src="{% static 'assets/images/crisnat/test1.jpg' %}" alt="">
+                        </div>
+                        <div class="case-one__content">
+                            <p class="case-one__tagline">Hierro</p>
+                            <h3 class="case-one__title"><a href="https://investorcloud.s3.amazonaws.com/crisnat/certificados/certificado1.pdf" target="_blank">CCIC North America</a></h3>
+                        </div>
+                        <div class="case-one__arrow">
+                            <a href="https://investorcloud.s3.amazonaws.com/crisnat/certificados/certificado1.pdf" target="_blank"><span class="icon-right-arrow"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp;">
+                    <!--Case One Single-->
+                    <div class="case-one__single">
+                        <div class="case-one__img">
+                            <img src="{% static 'assets/images/crisnat/test2.jpg' %}" alt="">
+                        </div>
+                        <div class="case-one__content">
+                            <p class="case-one__tagline">Antimonio</p>
+                            <h3 class="case-one__title"><a href="https://investorcloud.s3.amazonaws.com/crisnat/certificados/certificado2.pdf" target="_blank">Laboratorio Courtade</a></h3>
+                        </div>
+                        <div class="case-one__arrow">
+                            <a href="https://investorcloud.s3.amazonaws.com/crisnat/certificados/certificado2.pdf" target="_blank"><span class="icon-right-arrow"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+                    <!--Case One Single-->
+                    <div class="case-one__single">
+                        <div class="case-one__img">
+                            <img src="{% static 'assets/images/crisnat/test3.jpg' %}" alt="">
+                        </div>
+                        <div class="case-one__content">
+                            <p class="case-one__tagline">Rodio</p>
+                            <h3 class="case-one__title"><a href="https://investorcloud.s3.amazonaws.com/crisnat/certificados/certificado3.pdf" target="_blank">PYSQ Laboratorios</a>
+                            </h3>
+                        </div>
+                        <div class="case-one__arrow">
+                            <a href="https://investorcloud.s3.amazonaws.com/crisnat/certificados/certificado3.pdf" target="_blank"><span class="icon-right-arrow"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--CTA One Start-->
+    {% include 'partials/our_minerals_es.html' %}
+    <!--CTA One End-->
+{% endblock %}

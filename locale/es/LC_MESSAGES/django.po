@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-24 10:44-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\crisnat\settings.py:116
+msgid "Spanish"
+msgstr ""
+
+#: .\crisnat\settings.py:117
+msgid "English"
+msgstr ""
+
+#: .\frontend\templates\layouts\base.html:65
+msgid "Buscar"
+msgstr ""
+
+#: .\frontend\templates\partials\footer.html:17
+msgid "footer_desc"
+msgstr "Minerales esenciales  para el desarrollo"
+
+#: .\frontend\templates\partials\footer.html:28
+msgid "Explora"
+msgstr ""
+
+#: .\frontend\templates\partials\footer.html:31
+#: .\frontend\templates\partials\header.html:14
+msgid "Inicio"
+msgstr ""
+
+#: .\frontend\templates\partials\footer.html:34
+#: .\frontend\templates\partials\header.html:17
+msgid "Nosotros"
+msgstr ""
+
+#: .\frontend\templates\partials\footer.html:37
+#: .\frontend\templates\partials\header.html:20
+msgid "Materiales"
+msgstr ""
+
+#: .\frontend\templates\partials\footer.html:40
+#: .\frontend\templates\partials\header.html:23
+msgid "Sustentabilidad"
+msgstr ""
+
+#: .\frontend\templates\partials\footer.html:43
+#: .\frontend\templates\partials\header.html:26
+msgid "Media"
+msgstr ""
+
+#: .\frontend\templates\partials\footer.html:45
+#: .\frontend\templates\partials\footer.html:66
+#: .\frontend\templates\partials\header.html:28
+msgid "Contacto"
+msgstr ""
+
+#: .\frontend\templates\partials\footer.html:51
+msgid "Noticias"
+msgstr ""
+
+#: .\frontend\templates\partials\footer.html:52
+msgid "text_suscribir"
+msgstr ""
+"Suscríbete para recibir nuestros artículos y publicaciones más recientes"
+
+#: .\frontend\templates\partials\footer.html:57
+msgid "Correo"
+msgstr ""
+
+#: .\frontend\templates\partials\footer.html:93
+msgid "disenno"
+msgstr "Diseñado y generado por"

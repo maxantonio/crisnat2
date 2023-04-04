@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ title }}</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/images/favicons/apple-touch-icon.png' %}"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/images/favicons/favicon.png' %}"/>
+    <meta name="description" content="{{ meta_description }}"/>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+            href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+    {% block estilos %}
+        {% include 'partials/estilos.html' %}
+    {% endblock %}
+    {% block otherstyles %}
+    {% endblock %}
+
+</head>
+
+<body>
+{% block preloader %}
+    <div class="preloader">
+        <img class="preloader__image" width="60" src="{% static 'assets/images/favicons/favicon.png' %}" alt=""/>
+    </div>
+{% endblock %}
+<!-- /.preloader -->
+<div class="page-wrapper">
+    {% block header %}
+        {% include 'partials/header.html' %}
+    {% endblock %}
+
+    <div class="stricky-header stricked-menu main-menu">
+        <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+    </div><!-- /.stricky-header -->
+    {% block contenido %}
+
+    {% endblock %}
+    <!--Site Footer Start-->
+    {% block footer %}
+        {% include 'partials/footer.html' %}
+    {% endblock %}
+    <!--Site Footer End-->
+
+
+</div><!-- /.page-wrapper -->
+
+{% block mobile_nav %}
+    {% include 'partials/mobile_nav.html' %}
+{% endblock %}
+<div class="search-popup">
+    <div class="search-popup__overlay search-toggler"></div>
+    <!-- /.search-popup__overlay -->
+    <div class="search-popup__content">
+        <form action="{% url 'search' %}">
+            <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+            <input type="text" name="q" id="search" placeholder="{% trans "Buscar" %}..."/>
+            <button type="submit" aria-label="search submit" class="thm-btn">
+                <i class="icon-magnifying-glass"></i>
+            </button>
+        </form>
+    </div>
+    <!-- /.search-popup__content -->
+</div>
+<!-- /.search-popup -->
+
+<a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+<script type="text/javascript">
+    var locale = "{{ request.LANGUAGE_CODE }}";
+</script>
+{% block scripts %}
+    {% include 'partials/scripts.html' %}
+{% endblock %}
+{% block otherscript %}
+{% endblock %}
+</body>
+
+</html>

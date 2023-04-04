@@ -1,0 +1,37 @@
+.our-mission__title {
+    font-size: 60px;
+    
+}
+
+.work-together-tow__text {
+    
+    margin-left: 1px;
+}
+
+.welcome-two {
+    padding: 100px 0 50px;
+}
+
+.welcome-two__icon-box {
+
+    height: 124px;
+    width: 124px;
+}
+
+
+.section-title__tagline2 a {
+   color: #ff613c;
+   background-color: var(--oslim-extra);
+   position: relative;
+    display: inline-block;
+    color: var(--oslim-base);
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+    background-color: var(--oslim-extra);
+    padding: 4px 20px 3px;
+    border-radius: 15px;
+}

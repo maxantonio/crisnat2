@@ -1,0 +1,213 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block contenido %}
+    <!--Page Header Start-->
+    {% include 'partials/page_header.html' %}
+    <!--Page Header End-->
+
+    <!--Contact Details Start-->
+    <section class="contact-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="contact-details__inner">
+                        <div class="contact-details__map-box">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.994150240372!2d-101.71992708506525!3d21.1526310859314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bc0ae2cf0c0f3%3A0x7a50fd205abc6d4c!2sBlvd.%20Campestre%202502%2C%20El%20Refugio%2C%2037156%20Le%C3%B3n%2C%20Gto.%2C%20Mexico!5e0!3m2!1sen!2sca!4v1643046081701!5m2!1sen!2sca"
+                                    class="contact-details__map" allowfullscreen>
+
+                            </iframe>
+                        </div>
+                        <div class="contact-details__content">
+                            <div class="contact-details__title-box">
+                                <h4 class="contact-details__title">Queremos escucharle</h4>
+                                <p class="contact-details__text">Si tiene alguna duda o necesita alguna información más
+                                    específica sobre nuestra empresa, será un gusto para nosotros responder a sus
+                                    inquietudes.</p>
+                            </div>
+                            <div class="contact-details__contact-info">
+                                <div class="contact-details__contact-icon">
+                                    <span class="icon-phone1"></span>
+                                </div>
+                                <h4 class="contact-details__contact-number-email">
+                                    <a href="tel:12463330079" class="contact-details__contact-number">+1- ( 246 )
+                                        333 - 0079</a>
+                                    <a href="mailto:contacto@crisnat.com.mx"
+                                       class="contact-details__contact-email">contacto@crisnat.com.mx</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Contact Details End-->
+
+    <!--Contact Page Start-->
+    <section class="contact-page">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="section-title__tagline">Contacta con nosotros</span>
+                <h2 class="section-title__title">Escribe un mensaje</h2>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="contact-page__form">
+                        <form action="" method="POST" class="comment-one__form contact-form-validated">
+                            {% csrf_token %}
+                            <input type="hidden" id="contact_recaptcha_response" name="contact_recaptcha_response">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="comment-form__input-box">
+                                        <input
+                                                data-msg-required="Por favor, introduzca su nombre."
+                                                required
+                                                type="text" placeholder="Nombre" name="name">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="comment-form__input-box">
+                                        <input data-msg-required="Por favor, introduzca su dirección de correo electrónico."
+                                               data-msg-email="Por favor, introduce una dirección de correo electrónico válida."
+                                               required
+                                               type="email" placeholder="Correo electrónico" name="email">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="comment-form__input-box">
+
+                                        <input data-msg-required="Por favor, introduzca su teléfono." type="text"
+                                               placeholder="Teléfono" name="phone">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="comment-form__input-box">
+
+                                        <input data-msg-required="Por favor, introduzca el asunto." type="text"
+                                               placeholder="Asunto" name="subject">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="comment-form__input-box text-message-box">
+                                        <textarea data-msg-required="Por favor, dejenos un mensaje." name="message"
+                                                  placeholder="Mensaje"></textarea>
+                                    </div>
+                                    <div class="btn-box">
+                                        <button type="submit" id="contact-submit" class="thm-btn comment-form__btn">
+                                            Enviar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Contact Page End-->
+
+    <!--CTA One Start-->
+    {% include 'partials/our_minerals_es.html' %}
+    <!--CTA One End-->
+{% endblock %}
+{% block otherscript %}
+    <script defer src="https://www.google.com/recaptcha/api.js?render={{ site_key }}"></script>
+    <script>
+        var site_key = '{{ site_key }}';
+
+        function button_loading(button, icon, finish) {
+            if (!finish) {
+                $(button).prepend(icon);
+                $(button).addClass('loading');
+            } else {
+                $(button + ' i').remove();
+                $(button).removeClass('loading');
+            }
+        }
+
+        $(function () {
+            if ($(".contact-form-validated").length) {
+                var contact_form = $('.contact-form-validated');
+                contact_form.validate({
+                    rules: {
+                        name: {
+                            required: true
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        message: {
+                            required: true
+                        },
+                        phone: {
+                            required: true
+                        },
+                        subject: {
+                            required: true
+                        }
+                    },
+                });
+
+                grecaptcha.ready(function () {
+                    contact_form.submit(function (e) {
+                        e.preventDefault();
+                        if (contact_form.valid()) {
+                            button_loading('#contact-submit', '<i class="fa fa-spinner fa-spin mr-2"></i>');
+                            $('#contact-submit').prop('disabled', true);
+                            grecaptcha.execute(site_key, {action: 'contactform'})
+                                .then(function (token) {
+                                    document.getElementById('contact_recaptcha_response').value = token;
+                                    $.ajax({
+                                        headers: $('[name=csrfmiddlewaretoken]').val(),
+                                        type: 'POST',
+                                        url: '/contact-form',
+                                        data: contact_form.serialize(),
+                                        success: function (response) {
+                                            if (response.status === 'success') {
+                                                $('input').val('');
+                                                $('textarea').val('');
+                                                setTimeout(function () {
+                                                    $('#contact-submit').removeClass('loading');
+                                                }, 50);
+                                                button_loading('#contact-submit', '<i class="fa fa-spinner fa-spin mr-2"></i>', true);
+                                                $('#contact-submit').prop('disabled', false);
+                                                cuteAlert({
+                                                    type: "success",
+                                                    title: "Mensaje enviado",
+                                                    message: "Gracias por escribirnos, en breve nos pondremos en contacto con usted",
+                                                    buttonText: "Cerrar"
+                                                })
+                                            } else {
+                                                button_loading('#contact-submit', '<i class="fa fa-spinner fa-spin mr-2"></i>', true);
+                                                $('#contact-submit').prop('disabled', false);
+                                                cuteAlert({
+                                                    type: "error",
+                                                    title: "Error al enviar mensaje",
+                                                    message: "No se pudo enviar su mensaje, intentelo más tarde.",
+                                                    buttonText: "Cerrar"
+                                                });
+                                            }
+                                        },
+                                        error: function (xhr, textStatus, errorThrown) {
+                                            cuteAlert({
+                                                type: "error",
+                                                title: "Error al enviar mensaje",
+                                                message: "No se pudo enviar su mensaje, intentelo más tarde.",
+                                                buttonText: "Cerrar"
+                                            });
+                                            button_loading('#contact-submit', '<i class="fa fa-spinner fa-spin mr-2"></i>', true);
+                                            $('#contact-submit').prop('disabled', false);
+                                        }
+                                    });
+                                });
+                        }
+                    });
+                });
+            }
+        })
+    </script>
+{% endblock %}

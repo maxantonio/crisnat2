@@ -1,0 +1,518 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block contenido %}
+    <!--Main Slider Start-->
+    <section class="main-slider">
+        <div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
+    "effect": "fade",
+     "pagination": {
+        "el": "#main-slider-pagination",
+        "type": "bullets",
+        "clickable": true
+      },
+    "navigation": {
+        "nextEl": "#main-slider__swiper-button-next",
+        "prevEl": "#main-slider__swiper-button-prev"
+    },
+    "autoplay": {
+        "delay": 6500
+    }}'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="image-layer"
+                         style="background-image:url('{% static 'assets/images/backgrounds/slide3.jpg' %}');">
+                    </div>
+                    <!-- /.image-layer -->
+
+                    <div class="main-slider-shape-2"></div>
+                    <div class="main-slider-shape-3"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="main-slider__content">
+                                    <h2>High quality iron <br>and other <br> minerals</h2>
+                                    <a href="{% url 'nosotros' %}" class="thm-btn">GET TO KNOW US</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="image-layer"
+                         style="background-image: url('{% static 'assets/images/backgrounds/slide2.jpg' %}');">
+                    </div>
+                    <!-- /.image-layer -->
+
+                    <div class="main-slider-shape-2"></div>
+                    <div class="main-slider-shape-3"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <div class="main-slider__content">
+                                    <h2>A growing <br>Mexican mining<br> company
+                                    </h2>
+                                    <a href="{% url 'nosotros' %}" class="thm-btn">GET TO KNOW US</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-pagination" id="main-slider-pagination"></div>
+            <div class="main-slider__nav">
+                <div class="swiper-button-prev" id="main-slider__swiper-button-next">
+                    <i class="icon-right-arrow icon-left-arrow"></i>
+                </div>
+                <div class="swiper-button-next" id="main-slider__swiper-button-prev">
+                    <i class="icon-right-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Main Slider End-->
+
+    <!--Welcome One Start-->
+    <section class="welcome-one">
+        <div class="welcome-one-shape"
+             style="background-image: url('{% static 'assets/images/shapes/welcome-one-shape.png' %}');">
+        </div>
+        <div class="container">
+            <div class="welcome-one__top">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="welcome-one__top-left">
+                            <div class="section-title text-left">
+                                <span class="section-title__tagline">STRATEGIC LOCATION</span>
+                                <h2 class="section-title__title">Located in Mexico´s most important mining regions</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="welcome-one__top-right">
+                            <div class="welcome-one__counter">
+                                <ul class="welcome-one__counter-list list-unstyled">
+                                    <li class="welcome-one__counter-single wow fadeInUp" data-wow-delay="100ms">
+                                        <h3 class="odometer" data-count="11000">0</h3>
+                                        <p class="welcome-one__counter-text">Acres</p>
+                                    </li>
+                                    <li class="welcome-one__counter-single wow fadeInUp" data-wow-delay="200ms">
+                                        <h3 class="odometer" data-count="319500">0</h3>
+                                        <p class="welcome-one__counter-text"> MT in 2021</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="welcome-one__video-link wow fadeInRight" data-wow-delay="200ms"
+                                 style="background-image: url('{% static 'assets/images/backgrounds/welcome-one-video-link-bg.jpeg' %}');">
+                                <a href="https://www.youtube.com/watch?v=ea2uzaWlQks" class="video-popup">
+                                    <div class="welcome-one__video-icon">
+                                        <span class="fas fa-play"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-one__bottom">
+                <ul class="list-unstyled welcome-one__feature">
+                    <li class="welcome-one__feature-single wow fadeInUp" data-wow-delay="100ms">
+                        <div class="welcome-one__feature-content">
+                            <h3 class="welcome-one__feature-title">
+                                <a class="cursor-default" href="javascript:void(0)">Strategic <br>locations</a></h3>
+                            <div class="welcome-one__feature-arrow">
+                                <a class="cursor-default" href="javascript:void(0)"><span
+                                        class="icon-right-arrow"></span></a>
+                            </div>
+                        </div>
+                        <div class="welcome-one__feature-icon">
+                            <span class="icon-wealth"></span>
+                        </div>
+                        <div class="welcome-one__feature-count"></div>
+                    </li>
+                    <li class="welcome-one__feature-single wow fadeInUp" data-wow-delay="200ms">
+                        <div class="welcome-one__feature-content">
+                            <h3 class="welcome-one__feature-title"><a class="cursor-default" href="javascript:void(0)">Strong
+                                <br>
+                                partnerships</a></h3>
+                            <div class="welcome-one__feature-arrow">
+                                <a class="cursor-default" href="javascript:void(0)"><span
+                                        class="icon-right-arrow"></span></a>
+                            </div>
+                        </div>
+                        <div class="welcome-one__feature-icon">
+                            <span class="icon-data-analytics"></span>
+                        </div>
+                        <div class="welcome-one__feature-count"></div>
+                    </li>
+                    <li class="welcome-one__feature-single wow fadeInUp" data-wow-delay="300ms">
+                        <div class="welcome-one__feature-content">
+                            <h3 class="welcome-one__feature-title"><a class="cursor-default" href="javascript:void(0)">Sustainable
+                                <br>
+                                vision</a></h3>
+                            <div class="welcome-one__feature-arrow">
+                                <a class="cursor-default" href="javascript:void(0)"><span
+                                        class="icon-right-arrow"></span></a>
+                            </div>
+                        </div>
+                        <div class="welcome-one__feature-icon">
+                            <span class="icon-report"></span>
+                        </div>
+                        <div class="welcome-one__feature-count"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="welcome-one__find-solutions">
+                <p class="welcome-one__find-solutions-text">The most important thing for us is our human capital. <a
+                        href="{% url 'contacto' %}">CHECK OUR JOBS OPPORTUNITIES
+                </a></p>
+            </div>
+        </div>
+    </section>
+    <!--Welcome One End-->
+
+    <!--Work Together Start-->
+    <section class="work-together home-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="work-together__left wow slideInLeft" data-wow-delay="100ms"
+                         data-wow-duration="2500ms">
+                        <div class="work-together__img-box">
+                            <div class="work-together-shape-1"><img
+                                    src="{% static 'assets/images/shapes/work-together-shape-1.png' %}" alt=""></div>
+                            <div class="work-together__img-1">
+                                <img src="{% static 'assets/images/backgrounds/work1.jpg' %}" alt="">
+                                <div class="work-together__img-2">
+                                    <img src="{% static 'assets/images/backgrounds/work2.jpg' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="work-together__right">
+                        <div class="section-title text-left">
+                            {#                            <span class="section-title__tagline">SOBRE NOSOTROS</span>#}
+                            <h2 class="section-title__title">We are constantly evolving, with a vision of the future.
+                            </h2>
+                        </div>
+                        <p class="work-together__right-text">We have developed the necessary infrastructure for the
+                            extraction, transportation and export of high quality minerals to China and other
+                            destinations.
+                        </p>
+                        <ul class="list-unstyled work-together__points">
+                            <li>
+                                <div class="icon">
+                                    <i class="fa fa-arrow-right"></i>
+                                </div>
+                                <div class="text">
+                                    <p>The Jaba 4 mine consists of more than 11,000 acres</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fa fa-arrow-right"></i>
+                                </div>
+                                <div class="text">
+                                    <p>Located 110km from the port of Lázaro Cárdenas</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fa fa-arrow-right"></i>
+                                </div>
+                                <div class="text">
+                                    <p>Always in compliance with rules and regulations</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fa fa-arrow-right"></i>
+                                </div>
+                                <div class="text">
+                                    <p>Strong working relationship with related parties</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Work Together End-->
+
+    <!--Case One Start-->
+    <section class="case-one">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="section-title__tagline">EXTRACTION AND MARKETING</span>
+                <h2 class="section-title__title">Our Minerals</h2>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                    <!--Case One Single-->
+                    <div class="case-one__single">
+                        <div class="case-one__img">
+                            <img src="{% static 'assets/images/crisnat/iron.jpg' %}" alt="">
+                        </div>
+                        <div class="case-one__content">
+
+                            <h3 class="case-one__title"><a href="{% url 'materiales' %}">IRON</a></h3>
+                        </div>
+                        <div class="case-one__arrow">
+                            <a href="{% url 'materiales' %}"><span class="icon-right-arrow"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+                    <!--Case One Single-->
+                    <div class="case-one__single">
+                        <div class="case-one__img">
+                            <img src="{% static 'assets/images/crisnat/antimonio.jpg' %}" alt="">
+                        </div>
+                        <div class="case-one__content">
+
+                            <h3 class="case-one__title"><a href="{% url 'materiales' %}">ANTIMONY</a></h3>
+                        </div>
+                        <div class="case-one__arrow">
+                            <a href="{% url 'materiales' %}"><span class="icon-right-arrow"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                    <!--Case One Single-->
+                    <div class="case-one__single">
+                        <div class="case-one__img">
+                            <img src="{% static 'assets/images/crisnat/rodium.jpg' %}" alt="">
+                        </div>
+                        <div class="case-one__content">
+
+                            <h3 class="case-one__title"><a href="{% url 'materiales' %}">RHODIUM</a>
+                            </h3>
+                        </div>
+                        <div class="case-one__arrow">
+                            <a href="{% url 'materiales' %}"><span class="icon-right-arrow"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Case One End-->
+
+
+
+    <!--Our Mission Start-->
+    <section class="our-mission home-page">
+        <div class="our-mission-bg-box">
+            <div class="our-mission-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
+                 style="background-image: url('{% static 'assets/images/backgrounds/our-mission-bg.jpeg' %}');"></div>
+        </div>
+        <div class="our-mission-shape-1 shapemover2"></div>
+        <div class="our-mission-shape-2 shapemover2"></div>
+        <div class="our-mission-shape-3 shapemover2"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="our-mission__inner">
+                        <h2 class="our-mission__title">We measure, monitor <br> and work to improve our
+                            <br>environmental performance metrics
+
+                        </h2>
+                        <a href="{% url 'sustentabilidad' %}" class="thm-btn our-mission__btn">LEARN ABOUT OUR ESG
+                            PROGRAM
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Our Mission End-->
+
+    <!--Team One Start-->
+    <section class="team-one home-page">
+        <div class="team-one__container">
+            <div class="section-title text-center">
+                <span class="section-title__tagline">DIVERSIFIED CAPACITY
+</span>
+                <h2 class="section-title__title">Our Mines
+                </h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                    <!--Team One Single-->
+                    <div class="team-one__single">
+                        <div class="team-one__img">
+                            <img src="{% static 'assets/images/team/mina1.jpg' %}" alt="">
+                            <div class="team-one__content">
+                                <h3 class="team-one__name">Iron mine</h3>
+                                <p class="team-one__title">Michoacan</p>
+                            </div>
+                            <ul class="list-unstyled team-one__social">
+                                <li><a href="https://twitter.com/crisnatmineria" target="_blank"><i
+                                        class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                    <!--Team One Single-->
+                    <div class="team-one__single">
+                        <div class="team-one__img">
+                            <img src="{% static 'assets/images/team/mina2.jpg' %}" alt="">
+                            <div class="team-one__content">
+                                <h3 class="team-one__name">Antimony mine
+                                </h3>
+                                <p class="team-one__title">San Luis Potosí</p>
+                            </div>
+                            <ul class="list-unstyled team-one__social">
+                                <li><a href="https://twitter.com/crisnatmineria" target="_blank"><i
+                                        class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                    <!--Team One Single-->
+                    <div class="team-one__single">
+                        <div class="team-one__img">
+                            <img src="{% static 'assets/images/team/mina3.jpg' %}" alt="">
+                            <div class="team-one__content">
+                                <h3 class="team-one__name">Rhodium mine
+                                </h3>
+                                <p class="team-one__title">Michoacán</p>
+                            </div>
+                            <ul class="list-unstyled team-one__social">
+                                <li><a href="https://twitter.com/crisnatmineria" target="_blank"><i
+                                        class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!--Team One End-->
+
+
+
+    <!--News One Start-->
+    <section class="news-one">
+        <div class="news-one-shape-1 shapemover2"></div>
+        <div class="news-one-shape-2 float-bob-x-2"></div>
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="section-title__tagline">ON THE MEDIA
+</span>
+                <h2 class="section-title__title">News highlights
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                    <!--News One Single-->
+                    <div class="news-one__single">
+                        <div class="news-one__img">
+                            <img src="{% static 'assets/images/blog/news-1-1.jpg' %}" alt="">
+                            <a target="_blank"
+                               href="https://expansion.mx/economia/2022/01/20/manufactura-mineria-sectores-ayudaran-economia-mexico-2022">
+                                <span class="news-one__plus"></span>
+                            </a>
+                        </div>
+                        <div class="news-one__content">
+                            <p class="news-one__sub-title">MEXICO</p>
+                            <h3 class="news-one__title"><a target="_blank"
+                                                           href="https://expansion.mx/economia/2022/01/20/manufactura-mineria-sectores-ayudaran-economia-mexico-2022">Mexico's
+                                economy will be driven by mining and manufacturing in 2022
+                            </a></h3>
+                            <ul class="list-unstyled news-one__meta">
+                                <li><a target="_blank"
+                                       href="https://expansion.mx/economia/2022/01/20/manufactura-mineria-sectores-ayudaran-economia-mexico-2022"><i
+                                        class="fa fa-link"></i> Expansión</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+                    <!--News One Single-->
+                    <div class="news-one__single">
+                        <div class="news-one__img">
+                            <img src="{% static 'assets/images/blog/news-1-2.jpg' %}" alt="">
+                            <a target="_blank"
+                               href="https://www.bnamericas.com/es/reportajes/proyectos-mineros-en-construccion-en-mexico-rondan-los-us1500mn">
+                                <span class="news-one__plus"></span>
+                            </a>
+                        </div>
+                        <div class="news-one__content">
+                            <p class="news-one__sub-title">MINING</p>
+                            <h3 class="news-one__title"><a target="_blank"
+                                                           href="https://www.bnamericas.com/es/reportajes/proyectos-mineros-en-construccion-en-mexico-rondan-los-us1500mn">Mining
+                                projects under construction in Mexico are worth around US$1.5bn
+
+                            </a></h3>
+                            <ul class="list-unstyled news-one__meta">
+                                <li><a target="_blank"
+                                       href="https://www.bnamericas.com/es/reportajes/proyectos-mineros-en-construccion-en-mexico-rondan-los-us1500mn"><i
+                                        class="fa fa-link"></i> BNamericas</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                    <!--News One Single-->
+                    <div class="news-one__single">
+                        <div class="news-one__img">
+                            <img src="{% static 'assets/images/blog/news-1-3.jpg' %}" alt="">
+                            <a target="_blank"
+                               href="https://www.bnamericas.com/es/reportajes/diez-proyectos-mineros-mexicanos-a-los-que-estar-atentos-en-2022">
+                                <span class="news-one__plus"></span>
+                            </a>
+                        </div>
+                        <div class="news-one__content">
+                            <p class="news-one__sub-title">MINING</p>
+                            <h3 class="news-one__title"><a target="_blank"
+                                                           href="https://www.bnamericas.com/es/reportajes/diez-proyectos-mineros-mexicanos-a-los-que-estar-atentos-en-2022">Ten
+                                Mexican mining projects to watch out for in 2022
+
+                            </a></h3>
+                            <ul class="list-unstyled news-one__meta">
+                                <li><a target="_blank"
+                                       href="https://www.bnamericas.com/es/reportajes/diez-proyectos-mineros-mexicanos-a-los-que-estar-atentos-en-2022"><i
+                                        class="fa fa-link"></i> BNamericas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--News One End-->
+
+    <!--CTA One Start-->
+    <section class="cta-one minerales-last">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="cta-one__inner">
+                        <div class="cta-one__inner-content">
+                            <div class="cta-one-shape-1 float-bob-x"></div>
+                            <div class="cta-one-shape-2 float-bob-x-2"></div>
+                            <h3 class="cta-one__title">We extract and commercialize high quality essential materials
+                            </h3>
+                            <a href="{% url 'materiales' %}" class="thm-btn cta-one__btn">OUR MINERALS
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--CTA One End-->
+{% endblock %}
