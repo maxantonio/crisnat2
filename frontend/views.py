@@ -11,7 +11,7 @@ from frontend.forms import ContactForm, NewsletterForm
 
 def index(request):
     context = {
-        'title': "Crisnat - Minería",
+        'title': "Crisnat - Minería ",
         'meta_description': "Crisnat, una compañia minera mexicana en crecimiento"}
     return render(request, f'frontend/{request.LANGUAGE_CODE}/index.html', context)
 
